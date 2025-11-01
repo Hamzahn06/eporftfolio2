@@ -319,6 +319,39 @@
             flex-wrap: wrap;
         }
 
+        /* Career Project Section */
+        .career-project {
+            background-color: var(--light-bg);
+        }
+
+        .career-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .career-text h2 {
+            text-align: left;
+        }
+
+        .career-text h2::after {
+            left: 0;
+            transform: none;
+        }
+
+        .career-video {
+            text-align: center;
+        }
+
+        .project-video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border: 3px solid var(--primary-color);
+        }
+
         /* Presentation Section */
         .presentation {
             background-color: var(--light-bg);
@@ -742,15 +775,15 @@
 
         /* Responsive */
         @media (max-width: 992px) {
-            .presentation-content, .contact-content {
+            .presentation-content, .contact-content, .career-content {
                 grid-template-columns: 1fr;
             }
 
-            .presentation-text h2 {
+            .presentation-text h2, .career-text h2 {
                 text-align: center;
             }
 
-            .presentation-text h2::after {
+            .presentation-text h2::after, .career-text h2::after {
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -857,6 +890,7 @@
                     <li><a href="#courses" data-key="nav.courses">Academic Courses</a></li>
                     <li><a href="#education" data-key="nav.education">Education</a></li>
                     <li><a href="#engagement" data-key="nav.engagement">Civilian Engagement</a></li>
+                    <li><a href="#career-project" data-key="nav.career">Career Project</a></li>
                     <li><a href="#contact" data-key="nav.contact">Contact</a></li>
                     <li>
                         <div class="language-selector">
@@ -920,8 +954,7 @@
                     </div>
                 </div>
                 <div class="presentation-image">
-                    <!-- Remplacez cette URL par votre image de profil hébergée en ligne -->
-                    <img src="C:\Users\Hamza\Desktop\docs\WhatsApp Image 2025-10-28 at 22.33.26_8755ba79.jpg" alt="Hamman Hamza" class="profile-img">
+                    <img src="WhatsApp Image 2025-10-28 at 22.33.26_8755ba79.jpg" alt="Hamman Hamza" class="profile-img">
                 </div>
             </div>
         </div>
@@ -1030,7 +1063,6 @@
         </div>
     </section>
 
-    <!-- Rest of your HTML remains the same -->
     <!-- Academic Courses Section -->
     <section id="courses" class="courses">
         <div class="container">
@@ -1092,7 +1124,7 @@
                     <div class="timeline-content">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbKWAjyuLnjgUFl-JUhqGaZnB7Z5y2teId4w&s" alt="ENSEEIHT Logo" class="timeline-logo">
                         <div class="timeline-text">
-                            <div class="timeline-date">2025 - <span data-key="education.present">Present</span></div>
+                            <div class="timeline-date">2023 - <span data-key="education.present">Present</span></div>
                             <h3 data-key="education.study1.title">Computer Engineering</h3>
                             <p>INP-ENSEEIHT, Toulouse, France</p>
                             <p data-key="education.study1.description">Department of Digital Sciences - Training to become a computer engineer with focus on software development, algorithms, and computer systems.</p>
@@ -1104,7 +1136,7 @@
                     <div class="timeline-content">
                         <img src="https://static.wixstatic.com/media/5e65f4_739f6bc690884065a0e304527714eb62~mv2.jpg" alt="CPGE Logo" class="timeline-logo">
                         <div class="timeline-text">
-                            <div class="timeline-date">2023 - 2025</div>
+                            <div class="timeline-date">2021 - 2023</div>
                             <h3 data-key="education.study2.title">Preparatory Classes MP (Mathematics-Physics)</h3>
                             <p data-key="education.study2.school">Omar Ibn Al Khattab School, Morocco</p>
                             <p data-key="education.study2.description">Two years of intensive preparation in mathematics and physics, providing strong analytical and problem-solving skills for engineering studies.</p>
@@ -1116,7 +1148,7 @@
                     <div class="timeline-content">
                         <img src="https://th.bing.com/th/id/OIP.KBJjuDSJsHknEZogumNtNAHaHa?w=108&h=108&c=1&bgcl=254c8e&r=0&o=7&dpr=1.3&pid=ImgRC&rm=3" alt="Baccalaureate Logo" class="timeline-logo">
                         <div class="timeline-text">
-                            <div class="timeline-date">2023</div>
+                            <div class="timeline-date">2021</div>
                             <h3 data-key="education.study3.title">Moroccan Baccalaureate</h3>
                             <p data-key="education.study3.option">Mathematical Sciences A - International Option</p>
                             <p data-key="education.study3.description">Graduated with highest honors (Très Bien), demonstrating excellence in mathematics and scientific disciplines.</p>
@@ -1172,6 +1204,26 @@
                             <span class="engagement-tag" data-key="engagement.tags.nature">Nature</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Project Section -->
+    <section id="career-project" class="career-project">
+        <div class="container">
+            <div class="career-content">
+                <div class="career-text">
+                    <h2 data-key="career.title">Career Project</h2>
+                    <p data-key="career.p1">My career vision is to become a skilled software engineer who bridges the gap between innovative technology and real-world applications. I'm passionate about creating solutions that have a meaningful impact on society.</p>
+                    <p data-key="career.p2">Through this video presentation, I share my professional aspirations, technical interests, and the journey that has shaped my career path in computer engineering.</p>
+                    <p data-key="career.p3">I believe in continuous learning and adaptation to emerging technologies, with a focus on software development, artificial intelligence, and digital systems architecture.</p>
+                </div>
+                <div class="career-video">
+                    <video controls class="project-video">
+                        <source src="WhatsApp Video 2025-10-31 at 23.44.54_23bcc823.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
@@ -1238,9 +1290,9 @@
             <div class="footer-content">
                 <div class="logo">HAMMAN <span>HAMZA</span></div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/hamza-hamman-04349937a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/hamman-hamza" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/hamza10hn" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="https://www.instagram.com/hamza10hn?utm_source=qr&igsh=ODE2MGI5bDlpbDlp" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://instagram.com/hamza10hn" class="social-link"><i class="fab fa-instagram"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
@@ -1285,6 +1337,7 @@
                 "nav.courses": "Academic Courses",
                 "nav.education": "Education",
                 "nav.engagement": "Civilian Engagement",
+                "nav.career": "Career Project",
                 "nav.contact": "Contact",
                 
                 // Hero Section
@@ -1353,6 +1406,12 @@
                 "engagement.tags.teamBuilding": "Team Building",
                 "engagement.tags.nature": "Nature",
                 
+                // Career Project Section
+                "career.title": "Career Project",
+                "career.p1": "My career vision is to become a skilled software engineer who bridges the gap between innovative technology and real-world applications. I'm passionate about creating solutions that have a meaningful impact on society.",
+                "career.p2": "Through this video presentation, I share my professional aspirations, technical interests, and the journey that has shaped my career path in computer engineering.",
+                "career.p3": "I believe in continuous learning and adaptation to emerging technologies, with a focus on software development, artificial intelligence, and digital systems architecture.",
+                
                 // Contact Section
                 "contact.title": "Contact Me",
                 "contact.email": "Email",
@@ -1373,6 +1432,7 @@
                 "nav.courses": "Cours Académiques",
                 "nav.education": "Formation",
                 "nav.engagement": "Engagement Civique",
+                "nav.career": "Projet Professionnel",
                 "nav.contact": "Contact",
                 
                 // Hero Section
@@ -1440,6 +1500,12 @@
                 "engagement.tags.adventure": "Aventure",
                 "engagement.tags.teamBuilding": "Team Building",
                 "engagement.tags.nature": "Nature",
+                
+                // Career Project Section
+                "career.title": "Projet Professionnel",
+                "career.p1": "Ma vision de carrière est de devenir un ingénieur logiciel compétent qui fait le pont entre les technologies innovantes et les applications réelles. Je suis passionné par la création de solutions qui ont un impact significatif sur la société.",
+                "career.p2": "À travers cette présentation vidéo, je partage mes aspirations professionnelles, mes intérêts techniques et le parcours qui a façonné mon cheminement de carrière en ingénierie informatique.",
+                "career.p3": "Je crois en l'apprentissage continu et à l'adaptation aux technologies émergentes, avec un accent sur le développement logiciel, l'intelligence artificielle et l'architecture des systèmes numériques.",
                 
                 // Contact Section
                 "contact.title": "Me Contacter",
